@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Laboratorio. Tecnologías JavaScript y AJAX</title>
+    <link rel="shortcut icon" href="./Imagenes/Logo.jpg" type="image/x-icon">  <!--aqui se puede ver el favicon que irira en la pestaña de arriba -->
+    <link rel="stylesheet" href="./Css/normalize.css">
+    <link rel="stylesheet" href="./Css/estilos.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">Tecnologías JavaScript y AJAX.</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Polindromo</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Numero Mayor</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">O.vocales</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Mostrar URL</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Contenido de Archivo</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Ultimas Preguntas </a>
+                </li>
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">ATecnologías JavaScript y AJAX.</h1>
+            <p class="hero__paragraph"> Apretender a poner en práctica los conocimientos adquiridos de las tecnologías JS y AJAX.</p>
+          
+        </section>
+    </header>
+    <main>
+        <section class="container about">
+            <h2 class="subtitle">Ingresa tu palindromo</h2>
+            <p class="about__paragraph"> Palabra o frase que se lee igual de derecha a izquierda, que de izquierda a derecha. Algunos ejemplos: Adán - nada, amar - rama,
+                amor - Roma, animal - lámina
+                Omar - ramo,
+                rata - atar.</p>
+
+                <div class="about__main">
+                    <article class="about__icons">
+                        <img src="./Imagenes/palindromo.svg" class="about__icon">
+                        <h3 class="about__title"> palíndromo</h3>
+                    </article>
+                </div>
+        <section class="knowledge">
+            <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                    <h1 class="subtitle">palindromo!</h1>
+                    <figure class="knowledge__picture">
+                        <img src="./Imagenes/palindrome.jpg" class="knowledge__img">
+                    </figure>
+                    <form action="/my-handling-form-page" method="post">
+                    
+                <div class="contenedor">
+                    
+                    <div id="info">
+                        
+                        <p>Ejemplos: "La ruta nos aporto otro paso natural".</p>
+                        <p>¡Ojo!: NO escribas acentos ni signos de puntuación. (no lo he implementado en JS).</p>
+
+                    </div>
+                    <label for="dato">Escribe una frase:</label>
+                    <textarea id="dato" onfocus="this.select();">Odio la luz azul al oido</textarea>
+                    <br>
+                    <button onclick="Palindromo();" class="boton rojo">Verificar Palíndromo</button>
+            
+                    <div id="resultado"></div>
+                </div>
+
+                
+            </div>
+            <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                    <h1 class="subtitle">Numero Mayor</h1>
+                    <figure class="knowledge__picture">
+                        <img src="./Imagenes/numerosmayor.jpg" class="knowledge__img">
+                    </figure>
+                    <form>
+        
+            <div>
+                <label for="numbers">Ingresa una lista de números separados por comas:</label>
+                <input type="text" id="numbers">
+                <button onclick="findLargestNumber()">Encontrar Número Mayor</button>
+                <p id="result"></p>
+              </div>
+            </form>  
+            </div>
+            <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                    <h1 class="subtitle">Ordenar vocales!</h1>
+                    <figure class="knowledge__picture">
+                        <img src="./Imagenes/Vocales.jpg" class="knowledge__img">
+                    </figure>
+                    <form action="/my-handling-form-page" method="post">
+                        <ul>
+                          
+                          <div id="container">
+                            <label for="inputText">Ingresa un texto:</label>
+                            <input type="text" id="inputText">
+                            <button onclick="printVowels()">Mostrar Vocales</button>
+                            <div id="result"></div>
+                          </div>
+                          
+                        </ul>
+                    </form>
+                </div>
+            </div>
+            <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                    <h1 class="subtitle">Mostrar URL!</h1>
+                    <figure class="knowledge__picture">
+                        <img src="./Imagenes/URL-signo.jpg" class="knowledge__img">
+                    </figure>
+                </div>
+                <div id="container">
+                    <p>La URL actual es: <span id="urlDisplay"></span></p>
+                </div>           
+            </div>
+            <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                    <h1 class="subtitle">URL CABECERAS</h1>
+                    </figure>
+                    <img src="./Imagenes/URLsegundopunto.png" class="knowledge__img">
+                </div>
+                <div id="container">
+                    <button onclick="getHeaders()">Obtener Cabeceras</button>
+                    <div id="headerList"></div>
+                  </div>
+            </div>
+            <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                    <h1 class="subtitle">ESTADOS DE PETICIÓN</h1>
+                    <figure class="knowledge__picture">
+                        <img src="./Imagenes/estado.jpg" class="knowledge__img">
+                    </figure>
+                </div>
+                <div id="container">
+                    <button onclick="makeRequest()">Hacer Petición</button>
+                    <div id="status"></div>
+                    <div id="response"></div>
+            </div>
+            <div class="knowledge__container container">
+                    <div class="knowledege__texts">
+                        <h1 class="subtitle">Respuestas del servidor</h1>
+                        <figure class="knowledge__picture">
+
+                            <img src="./Imagenes/Respuesta-del-servidor.jpg" class="knowledge__img">
+                        </figure>
+                    </div>
+                    <div id="container">
+                        <button onclick="getHeaders()">Obtener Cabeceras</button>
+                        <div id="headerList"></div>
+                    </div>
+            </div>
+            <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                    <h1 class="subtitle">Codigo</h1>
+                    <figure class="knowledge__picture">
+                        <img src="./Imagenes/Respuesta-del-servidor.jpg" class="knowledge__img">
+                    </figure>
+                </div>
+                <div id="container">
+                    <button onclick="getResponse()">Obtener Respuesta del Servidor</button>
+                    <div id="status"></div>
+                    <div id="response"></div>
+                </div>
+        </div>
+
+        </section>    
+    </main>
+    <script src="./js/palindromo.js"></script>
+    <script src="./js/numeromayor.js"></script>
+    <script src="./js/url.js"></script>
+    <script src="./js/cuartopunto.js"></script>
+    <script src="./js/menu.js"></script>
+
+</body>
+</html>
